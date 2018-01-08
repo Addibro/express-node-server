@@ -46,7 +46,7 @@ module.exports = function(app) {
                                 // put the url (a new key) in the cache
                                 // with a value of the body of the dog server
                                 // set the expiry time to 10 secs
-                                client.setex('http://localhost:3003/dog', 10, JSON.stringify(body.data), function (err) {
+                                client.setex('http://localhost:3003/dog', 10000, JSON.stringify(body.data), function (err) {
                                     if (err) throw err;
                                 });
                             } else {
@@ -57,15 +57,8 @@ module.exports = function(app) {
                 });
             }
         }, function (err, results) {
-            res.json({
-                error: err,
-                results: results
-            })
+            console.log(results);
+            res.render('pets.jade', {pets: 'pets', json: results});
         });
     });
-
-    app.get('/ping', function (req, res) {
-        res.json({pong: Date.now()});
-    });
-
 };

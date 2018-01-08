@@ -30,7 +30,7 @@ module.exports = function (app) {
             // the server it will load instantly
             setTimeout(function () {
                 res.json({info: 'dogs found successfully', data: dogs});
-            }, 10000);
+            }, 1000);
         });
     });
 

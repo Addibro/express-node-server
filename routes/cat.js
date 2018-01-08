@@ -32,7 +32,7 @@ module.exports = function (app) {
             if (cat) {
                 setTimeout(function () {
                     res.json({info: 'cats found successfully', data: dogs});
-                }, 10000);
+                }, 1000);
                 // res.json({info: 'successfully found ' + req.params.name, data: cat});
             } else {
                 res.json({info: 'cat not found'});

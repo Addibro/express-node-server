@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 Pets
+    each key, i in json
+        h3=i.toUpperCase()
+        each item, i in key
+            p ##{i+1}
+            p Name: #{item.name}
+            p Age: #{item.age}
+            p Type: #{item.type}
+            p Id: #{item._id}

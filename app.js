@@ -1,4 +1,4 @@
-var express = require('express'); // the express framework
+var express = require('express'); // reference to the express framework
 var path = require('path'); // core Node module for working with paths
 var favicon = require('serve-favicon'); // the icon in the tab, prior to the site name
 var logger = require('morgan'); // express middleware for logging requests and responses. Used during dev.
