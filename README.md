@@ -1,7 +1,5 @@
 # Node Basics
 
-A repository for Node as a Web Api talk at Angle Brackets 2015 conference
-
 Slides available [here](https://docs.google.com/presentation/d/1DjxNtdHH1k39Kml5If9Euo7ZKXAT52HDNgQpJTbcUGg/edit?usp=sharing)
 
 ## Requirements
@@ -16,38 +14,36 @@ Slides available [here](https://docs.google.com/presentation/d/1DjxNtdHH1k39Kml5
 
 ## Clone the repo
 
-    git clone git@github.com:sartioli/node-web-api.git
-    cd node-web-api
+    git clone https://github.com/Addibro/express-node-server.git
+    cd express-node-server
 
 ### 01 Basic Server
 
-    cd 01-basic_server
-    node index.js
+    cd bin
+    node www
 
-<http://localhost:3000>
+<http://localhost:3001>
 
 ### 02 Express
 
-    cd 02-express
     npm install
     node index.js
 
-<http://localhost:3000>
+<http://localhost:3001>
 
 ### 03 Crud
 
-    cd 03-express
     npm install
     node index.js
 
 
-    curl -s -H "Content-Type: application/json" -X POST -d '{"name":"jessy","age":"3","type":"siamese"}' http://localhost:3000/cat | json
+    curl -s -H "Content-Type: application/json" -X POST -d '{"name":"jessy","age":"3","type":"siamese"}' http://localhost:3002/cat | json
 
-    curl -s -H "Content-Type: application/json" -X POST -d '{"name":"sam","age":"5","type":"alley"}' http://localhost:3000/cat | json
+    curl -s -H "Content-Type: application/json" -X POST -d '{"name":"sam","age":"5","type":"alley"}' http://localhost:3002/cat | json
 
     curl -s -X GET http://localhost:3000/cat | json
 
-    curl -s -H "Content-Type: application/json" -X PUT -d '{"name":"sam","age":"8","type":"alley"}' http://localhost:3000/cat/sam | json
+    curl -s -H "Content-Type: application/json" -X PUT -d '{"name":"sam","age":"8","type":"alley"}' http://localhost:3002/cat/sam | json
 
     curl -s -X DELETE http://localhost:3000/cat/sam | json
 
@@ -56,12 +52,10 @@ Slides available [here](https://docs.google.com/presentation/d/1DjxNtdHH1k39Kml5
 
 <https://www.mongodb.org/downloads>
 
-On Mac I recommend homebrew
 
     brew up
     brew install mongodb
 
-    cd 04-mongodb
     npm install
     nodemon index.js
 
@@ -77,7 +71,7 @@ On Mac I recommend homebrew
 
 <https://github.com/request/request>
 
-    cd 05-request
+    brew i forever
     npm install
     forever start cat_server.js
     forever start dog_server.js
@@ -95,7 +89,7 @@ On Mac I recommend homebrew
 
     nodemon pet_server.js
 
-<http://localhost:3002/pets>
+<http://localhost:3001/pets>
 
 ### 06 Async
 
@@ -114,7 +108,6 @@ On Mac I recommend homebrew
 
 <https://github.com/caolan/async>
 
-    cd 07-non_blocking
     npm install
     forever stopall
     forever start cat_server.js
@@ -134,7 +127,6 @@ On Mac I recommend homebrew
     brew up
     brew install redis
 
-    cd 08-redis
     npm install
     forever stopall
     forever start cat_server.js
