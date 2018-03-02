@@ -1,6 +1,5 @@
 # Node Basics
 
-Slides available [here](https://docs.google.com/presentation/d/1DjxNtdHH1k39Kml5If9Euo7ZKXAT52HDNgQpJTbcUGg/edit?usp=sharing)
 
 ## Requirements
 
